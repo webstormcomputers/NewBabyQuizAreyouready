@@ -5,35 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.webstormcomputers.newbabyquizareyouready.MainActivity">
+    tools:context="com.webstormcomputers.newbabyquizareyouready.MainActivity"
+    android:paddingLeft="16dp">
+
     <TextView
+        android:id="@+id/openingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="This is a quiz that will help you decide if you're ready for a new baby."
-        android:paddingLeft="16dp"
-        android:textSize="24dp"/>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+        android:textSize="24dp"
+        android:visibility="visible" />
+     <Button
+         android:id="@+id/Next"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:onClick="invisible"
+         android:text="Next"/>
 
             <TextView
+                android:id="@+id/ques1Text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Question 1 about babies" />
+                android:text="Question 1 about babies"
+                android:visibility="gone"/>
 
             <RadioGroup
+                android:id="@+id/ques1Rad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:visibility="gone"
+                >
 
                 <RadioButton
                     android:id="@+id/ques1ans1"
@@ -45,121 +46,117 @@
                     android:id="@+id/ques1ans2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+
                     android:text="Question1 Answer 2" />
 
             </RadioGroup>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Question 1 about babies" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+        android:text="Question 1 about babies"
+        android:visibility="gone" />
 
-                <RadioButton
-                    android:id="@+id/ques2ans1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Question2 Answer 1" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
-                <RadioButton
-                    android:id="@+id/ques2ans2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Question2 Answer 2" />
+        <RadioButton
+            android:id="@+id/ques2ans1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question2 Answer 1" />
 
-            </RadioGroup>
+        <RadioButton
+            android:id="@+id/ques2ans2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Question 1 about babies" />
+            android:text="Question2 Answer 2" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+    </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/ques3ans1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Question3 Answer 1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-                <RadioButton
-                    android:id="@+id/ques3ans2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Question3 Answer 2" />
+        android:text="Question 1 about babies"
+        android:visibility="gone" />
 
-            </RadioGroup>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Question 1 about babies" />
+        <RadioButton
+            android:id="@+id/ques3ans1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question3 Answer 1" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+        <RadioButton
+            android:id="@+id/ques3ans2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question3 Answer 2" />
 
-                <RadioButton
-                    android:id="@+id/ques4ans1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Question4 Answer 1" />
+    </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/ques4ans2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Question4 Answer 2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 1 about babies"
+        android:visibility="gone" />
 
-            </RadioGroup>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Question 1 about babies" />
+        <RadioButton
+            android:id="@+id/ques4ans1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question4 Answer 1" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+        <RadioButton
+            android:id="@+id/ques4ans2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question4 Answer 2" />
 
-                <RadioButton
-                    android:id="@+id/ques5ans1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Question5 Answer 1" />
+    </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/ques5ans2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Question5 Answer 2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 1 about babies"
+        android:visibility="gone" />
 
-            </RadioGroup>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
+        <RadioButton
+            android:id="@+id/ques5ans1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question5 Answer 1" />
 
-        </LinearLayout>
+        <RadioButton
+            android:id="@+id/ques5ans2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question5 Answer 2" />
 
-    </ScrollView>
-
-
-
-
+    </RadioGroup>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"/>
 </LinearLayout>
