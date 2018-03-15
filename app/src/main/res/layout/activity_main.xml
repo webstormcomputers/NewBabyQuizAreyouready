@@ -55,7 +55,7 @@
         android:id="@+id/quesText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 1 about babies"
+        android:text="Question 2 about babies"
         android:visibility="gone" />
 
     <RadioGroup
@@ -83,7 +83,7 @@
         android:id="@+id/quesText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 1 about babies"
+        android:text="Question 3 about babies"
         android:visibility="gone" />
 
     <RadioGroup
@@ -110,7 +110,7 @@
         android:id="@+id/quesText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 1 about babies"
+        android:text="Question 4 about babies"
         android:visibility="gone" />
 
     <RadioGroup
@@ -137,7 +137,7 @@
         android:id="@+id/quesText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 1 about babies"
+        android:text="Question 5 about babies"
         android:visibility="gone" />
 
     <RadioGroup
