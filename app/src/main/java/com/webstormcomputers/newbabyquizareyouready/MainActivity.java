@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     int counter = 1;
     TextView[] textViewArray = new TextView[questionCount];
     RadioGroup[] radGroupArray = new RadioGroup[questionCount];
-    private String[] id;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
         dissapear.setVisibility(View.GONE);
         if (counter < questionCount) {
             int temp;
-            id = new String[]{"quesText" + counter};
-            temp = getResources().getIdentifier(id, "id", getPackageName());
+            id = "quesText";
+            id = id + counter ;
+            temp = getResources().getIdentifier(id,"id",getPackageName());
             textViewArray[counter] = (TextView) findViewById(temp);
 
             if (counter < 1)
