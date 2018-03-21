@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">New Baby Quiz, Are you ready</string>
+    <string name="OpeningText">This is a quiz that will help you decide if you\'re ready for a new baby.</string>
+    <string name="next_button">Next</string>
+    <string name="question1">How do you handle body fluids?</string>
+    <string name="ans11">EWWW BARF</string>
+    <string name="ans12">Meh, we all make them.</string>
 </resources>

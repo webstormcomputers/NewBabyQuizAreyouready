@@ -6,27 +6,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.webstormcomputers.newbabyquizareyouready.MainActivity"
-    android:paddingLeft="16dp">
+    android:paddingStart="16dp"
+    android:paddingLeft="@dimen/Leftpadding">
 
     <TextView
         android:id="@+id/openingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is a quiz that will help you decide if you're ready for a new baby."
-        android:textSize="24dp"
+        android:text="@string/OpeningText"
+        android:textSize="24sp"
         android:visibility="visible" />
-    <Button
-        android:id="@+id/Next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="invisible"
-        android:text="Next"/>
+
 
     <TextView
         android:id="@+id/quesText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 1 about babies"
+        android:text="@string/question1"
         android:visibility="gone"/>
 
     <RadioGroup
@@ -37,17 +33,19 @@
         >
 
         <RadioButton
-            android:id="@+id/ques1ans1"
+            android:id="@+id/ans11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question1 Answer 1" />
+            android:text="@string/ans11"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-            android:id="@+id/ques1ans2"
+            android:id="@+id/ans12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="Question1 Answer 2" />
+            android:text="@string/ans12"
+            android:onClick="onRadioButtonClicked"
+            />
 
     </RadioGroup>
 
@@ -65,17 +63,19 @@
         android:visibility="gone">
 
         <RadioButton
-            android:id="@+id/ques2ans1"
+            android:id="@+id/ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question2 Answer 1" />
+            android:text="Question2 Answer 1"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-            android:id="@+id/ques2ans2"
+            android:id="@+id/ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="Question2 Answer 2" />
+            android:onClick="onRadioButtonClicked"
+            android:text="Question2 Answer 2"
+            />
 
     </RadioGroup>
 
@@ -165,4 +165,18 @@
         android:layout_height="wrap_content"
         android:text=""
         android:visibility="gone"/>
+    <TextView
+        android:id="@+id/scoreTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        />
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:onClick="invisible"
+        android:text="@string/next_button" />
 </LinearLayout>
