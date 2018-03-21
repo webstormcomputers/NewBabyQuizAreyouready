@@ -29,7 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    /***
+     * I need to remove the code for advancing the counter into a seperate method and then remove the button after the first click.
+     * Clicking on a radio button should call the advance method which advances the counter and changes the views out.
+     *
+     * @param v
+     */
 
     public void invisible(View v) {
 
@@ -46,7 +51,14 @@ public class MainActivity extends AppCompatActivity {
             radTemp = getResources().getIdentifier(rad,"id", getPackageName());
             radGroupArray[counter] = (RadioGroup) findViewById(radTemp);
             Log.d("ADebugTag", "Value: " + counter);
+            int radioButtonCheck = radGroupArray[counter].getCheckedRadioButtonId();
 
+            //This is a test to see if the user has clicked a radio button or not. If they haven't they shouldn't go any further.
+             if (radioButtonCheck == -1 )
+             {
+
+
+             }
 
 
             if (counter > 1)
@@ -75,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             result.setVisibility(View.VISIBLE);
             Button button = (Button) findViewById(R.id.Next);
             button.setVisibility(View.GONE);
-            TextView total = (TextView) findViewById(R.id.scoreTotal);
+           //TextView total = (TextView) findViewById(R.id.scoreTotal);
             Log.v ("Score", "Value"+ score);
             //total.setText(score);
             //total.setVisibility(View.VISIBLE);
@@ -84,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }//end invisible
     public void onRadioButtonClicked(View view){
-        boolean checked = ((RadioButton) view).isChecked();
+        //boolean checked = ((RadioButton) view).isChecked();
         switch(view.getId()) {
             case R.id.ans11:
                 score = score + 1;
@@ -117,26 +129,8 @@ public class MainActivity extends AppCompatActivity {
                 score = score + 2;
                 break;
         }
-        TextView total = (TextView) findViewById(R.id.scoreTotal);
-        total.setText(Integer.toString(score));
+        //TextView total = (TextView) findViewById(R.id.scoreTotal);
+        //total.setText(Integer.toString(score));
     }
-/****
- calculateScore(radID);
- }
- public void calculateScore (String radid ) {
-
- switch (radid)
- {
- case "ans11":
- score = score + 1 ;
-
- break;//the
- case "ans12":
- score= score + 2;
- break;
-
- }
-
- } **/
 
 }
