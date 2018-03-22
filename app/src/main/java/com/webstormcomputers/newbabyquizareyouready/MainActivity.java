@@ -40,6 +40,27 @@ public class MainActivity extends AppCompatActivity {
 
         TextView dissapear = (TextView) findViewById(R.id.openingText);
         dissapear.setVisibility(View.GONE);
+        int temp;
+        int radTemp;
+        id = "quesText";
+        id = id + counter ;
+        temp = getResources().getIdentifier(id,"id",getPackageName());
+        textViewArray[counter] = (TextView) findViewById(temp);
+        rad = "quesRad" + counter;
+        radTemp = getResources().getIdentifier(rad,"id", getPackageName());
+        radGroupArray[counter] = (RadioGroup) findViewById(radTemp);
+
+        textViewArray[counter].setVisibility(View.VISIBLE);
+        radGroupArray[counter].setVisibility(View.VISIBLE);
+        Button button = (Button) findViewById(R.id.Next);
+        button.setVisibility(View.GONE);
+
+
+    }//end invisible
+
+
+
+    public void onRadioButtonClicked(View view){
         if (counter < 6) {
             int temp;
             int radTemp;
@@ -50,15 +71,6 @@ public class MainActivity extends AppCompatActivity {
             rad = "quesRad" + counter;
             radTemp = getResources().getIdentifier(rad,"id", getPackageName());
             radGroupArray[counter] = (RadioGroup) findViewById(radTemp);
-            Log.d("ADebugTag", "Value: " + counter);
-            int radioButtonCheck = radGroupArray[counter].getCheckedRadioButtonId();
-
-            //This is a test to see if the user has clicked a radio button or not. If they haven't they shouldn't go any further.
-             if (radioButtonCheck == -1 )
-             {
-
-
-             }
 
 
             if (counter > 1)
@@ -74,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             if (counter != 6) {
                 counter++;
             }
-
+            checkScore(view);
 
 
         } //end if
@@ -85,18 +97,21 @@ public class MainActivity extends AppCompatActivity {
             TextView result = (TextView) findViewById(R.id.result);
             result.setText("You finished the quiz");
             result.setVisibility(View.VISIBLE);
-            Button button = (Button) findViewById(R.id.Next);
-            button.setVisibility(View.GONE);
-           //TextView total = (TextView) findViewById(R.id.scoreTotal);
+
+            //TextView total = (TextView) findViewById(R.id.scoreTotal);
             Log.v ("Score", "Value"+ score);
             //total.setText(score);
             //total.setVisibility(View.VISIBLE);
 
 
         }
-    }//end invisible
-    public void onRadioButtonClicked(View view){
         //boolean checked = ((RadioButton) view).isChecked();
+
+        //TextView total = (TextView) findViewById(R.id.scoreTotal);
+        //total.setText(Integer.toString(score));
+    }
+
+    public void checkScore(View view){
         switch(view.getId()) {
             case R.id.ans11:
                 score = score + 1;
@@ -129,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
                 score = score + 2;
                 break;
         }
-        //TextView total = (TextView) findViewById(R.id.scoreTotal);
-        //total.setText(Integer.toString(score));
     }
+
+
 
 }

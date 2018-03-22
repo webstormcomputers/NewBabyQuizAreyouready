@@ -96,13 +96,16 @@
             android:id="@+id/ques3ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question3 Answer 1" />
+            android:text="Question3 Answer 1"
+            android:onClick="onRadioButtonClicked"
+            />
 
         <RadioButton
             android:id="@+id/ques3ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question3 Answer 2" />
+            android:text="Question3 Answer 2"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 
@@ -123,13 +126,15 @@
             android:id="@+id/ques4ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question4 Answer 1" />
+            android:text="Question4 Answer 1"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/ques4ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question4 Answer 2" />
+            android:text="Question4 Answer 2"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 
@@ -150,13 +155,15 @@
             android:id="@+id/ques5ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question5 Answer 1" />
+            android:text="Question5 Answer 1"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
             android:id="@+id/ques5ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question5 Answer 2" />
+            android:text="Question5 Answer 2"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
     <TextView
