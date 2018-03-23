@@ -5,4 +5,20 @@
     <string name="question1">How do you handle body fluids?</string>
     <string name="ans11">EWWW BARF</string>
     <string name="ans12">Meh, we all make them.</string>
+    <string name="question_2_about_babies">Cluttered floors, tables, chairs, car, everthing.</string>
+    <string name="question2_answer_1">panic attack</string>
+    <string name="question2_answer_2">it\'ll be clean when they grow up</string>
+    <string name="question_3_about_babies">Intrusive comments/advice from everyone around you and online?</string>
+    <string name="question3_answer_1">Verbally abusing the next person to give you advice.</string>
+    <string name="question3_answer_2">Listen carefully and considerately while pondering their completely contrary suggestions.</string>
+    <string name="question_4_about_babies">Dr.s appointments. LOTS OF THEM.</string>
+    <string name="question4_answer_1">Don\'t they have a program where someone else sits in line for me?</string>
+    <string name="question4_answer_2">I\'ve got books for me and the kids, let do this.</string>
+    <string name="question_5_about_babies">How do you like free time?</string>
+    <string name="question5_answer_1">my personal time is important to me above all else.</string>
+    <string name="question5_answer_2">I prefer having a tiny dictator version of me arranging my schedule for me.</string>
+    <string name="Finishtext">You finished the quiz here\'s your answer below.</string>
+    <string name="Finishtext1">Perhaps your\'e not quite ready for a baby. However this is just a silly quiz so if you want ot have kids go for it.</string>
+    <string name="Finishtext2">You\'ve got some maturity to you. Having kids shouldn\'t be a major life changer for you. </string>
+    <string name="Finishtext3">You answered every question perfectly, you\'re ready for kids or more kids. </string>
 </resources>

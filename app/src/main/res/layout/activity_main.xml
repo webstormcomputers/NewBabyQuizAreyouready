@@ -15,18 +15,20 @@
         android:layout_height="wrap_content"
         android:text="@string/OpeningText"
         android:textSize="24sp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_marginTop="16dp"/>
 
 
     <TextView
-        android:id="@+id/quesText1"
+        android:id="@+id/quesText0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/question1"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
 
     <RadioGroup
-        android:id="@+id/quesRad1"
+        android:id="@+id/quesRad0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
@@ -37,7 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ans11"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"/>
 
         <RadioButton
             android:id="@+id/ans12"
@@ -45,19 +48,21 @@
             android:layout_height="wrap_content"
             android:text="@string/ans12"
             android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"
             />
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/quesText2"
+        android:id="@+id/quesText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 2 about babies"
-        android:visibility="gone" />
+        android:text="@string/question_2_about_babies"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
 
     <RadioGroup
-        android:id="@+id/quesRad2"
+        android:id="@+id/quesRad1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone">
@@ -66,28 +71,31 @@
             android:id="@+id/ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question2 Answer 1"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/question2_answer_1"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"/>
 
         <RadioButton
             android:id="@+id/ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Question2 Answer 2"
+            android:text="@string/question2_answer_2"
+            android:layout_marginTop="16dp"
             />
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/quesText3"
+        android:id="@+id/quesText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 3 about babies"
-        android:visibility="gone" />
+        android:text="@string/question_3_about_babies"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
 
     <RadioGroup
-        android:id="@+id/quesRad3"
+        android:id="@+id/quesRad2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone">
@@ -96,28 +104,31 @@
             android:id="@+id/ques3ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question3 Answer 1"
+            android:text="@string/question3_answer_1"
             android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"
             />
 
         <RadioButton
             android:id="@+id/ques3ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question3 Answer 2"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/question3_answer_2"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"/>
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/quesText4"
+        android:id="@+id/quesText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 4 about babies"
-        android:visibility="gone" />
+        android:text="@string/question_4_about_babies"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
 
     <RadioGroup
-        android:id="@+id/quesRad4"
+        android:id="@+id/quesRad3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone">
@@ -126,27 +137,30 @@
             android:id="@+id/ques4ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question4 Answer 1"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/question4_answer_1"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"/>
 
         <RadioButton
             android:id="@+id/ques4ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question4 Answer 2"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/question4_answer_2"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"/>
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/quesText5"
+        android:id="@+id/quesText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 5 about babies"
-        android:visibility="gone" />
+        android:text="@string/question_5_about_babies"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
 
     <RadioGroup
-        android:id="@+id/quesRad5"
+        android:id="@+id/quesRad4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone">
@@ -155,15 +169,17 @@
             android:id="@+id/ques5ans1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question5 Answer 1"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/question5_answer_1"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"/>
 
         <RadioButton
             android:id="@+id/ques5ans2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Question5 Answer 2"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/question5_answer_2"
+            android:onClick="onRadioButtonClicked"
+            android:layout_marginTop="16dp"/>
 
     </RadioGroup>
     <TextView
@@ -171,7 +187,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/Next"

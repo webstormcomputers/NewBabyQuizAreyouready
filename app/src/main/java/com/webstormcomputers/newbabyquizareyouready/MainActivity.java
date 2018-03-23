@@ -10,8 +10,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int questionCount = 6;
-    int counter = 1;
+    int questionCount = 5;
+    int counter = 0;
     TextView[] textViewArray = new TextView[questionCount];
     RadioGroup[] radGroupArray = new RadioGroup[questionCount];
     String id;
@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /***
-     * I need to remove the code for advancing the counter into a seperate method and then remove the button after the first click.
-     * Clicking on a radio button should call the advance method which advances the counter and changes the views out.
+     *Invisible is called to remove the opening text and setup the questions
      *
      * @param v
      */
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onRadioButtonClicked(View view){
-        if (counter < 6) {
+        if (counter < 4 ) {
             int temp;
             int radTemp;
             id = "quesText";
@@ -73,42 +72,57 @@ public class MainActivity extends AppCompatActivity {
             radGroupArray[counter] = (RadioGroup) findViewById(radTemp);
 
 
-            if (counter > 1)
-            { int prev = counter - 1;
-                textViewArray[prev].setVisibility(View.GONE);
-                radGroupArray[prev].setVisibility(View.GONE);
+
+            if (counter < 4) {
+                textViewArray[counter].setVisibility(View.GONE);
+                radGroupArray[counter].setVisibility(View.GONE);
 
             }
-            if (counter <6 ) {
+            if (counter < 4) {
+
+                    counter++;
+
+                id = "";
+                id = "quesText";
+                id = id + counter ;
+                temp = getResources().getIdentifier(id,"id",getPackageName());
+                textViewArray[counter] = (TextView) findViewById(temp);
                 textViewArray[counter].setVisibility(View.VISIBLE);
+                rad = "quesRad" + counter;
+                radTemp = getResources().getIdentifier(rad,"id", getPackageName());
+                radGroupArray[counter] = (RadioGroup) findViewById(radTemp);
                 radGroupArray[counter].setVisibility(View.VISIBLE);
             }
-            if (counter != 6) {
-                counter++;
-            }
+
+
             checkScore(view);
 
 
         } //end if
         else { //end Display score and result
-            int prev = counter - 1;
-            textViewArray[prev].setVisibility(View.GONE);
-            radGroupArray[prev].setVisibility(View.GONE);
-            TextView result = (TextView) findViewById(R.id.result);
-            result.setText("You finished the quiz");
-            result.setVisibility(View.VISIBLE);
 
-            //TextView total = (TextView) findViewById(R.id.scoreTotal);
-            Log.v ("Score", "Value"+ score);
-            //total.setText(score);
-            //total.setVisibility(View.VISIBLE);
+            textViewArray[counter].setVisibility(View.GONE);
+            radGroupArray[counter].setVisibility(View.GONE);
+            TextView result = (TextView) findViewById(R.id.result);
+            if (score == 5) {
+                result.setText(R.string.Finishtext1);
+                result.setVisibility(View.VISIBLE);
+            }
+            if (score > 5 && score < 10)
+            {
+                result.setText(R.string.Finishtext2);
+                result.setVisibility(View.VISIBLE);
+            }
+            if (score == 10)
+            {
+                result.setText(R.string.Finishtext3);
+                result.setVisibility(View.VISIBLE);
+            }
+
 
 
         }
-        //boolean checked = ((RadioButton) view).isChecked();
 
-        //TextView total = (TextView) findViewById(R.id.scoreTotal);
-        //total.setText(Integer.toString(score));
     }
 
     public void checkScore(View view){
